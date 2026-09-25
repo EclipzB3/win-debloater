@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-title Windows Debloater & Privacy Hardener v1.0
+title Windows Debloater ^& Privacy Hardener v1.0
 
 :: ===================================================
 :: Check Administrator Privileges
@@ -17,14 +17,14 @@ if %errorlevel% neq 0 (
 :menu
 cls
 echo ===================================================================
-echo                  Windows Debloater & Hardener
+echo                  Windows Debloater ^& Hardener
 echo ===================================================================
 echo  [1] Full Debloat (Telemetry + Bloatware Apps + Registry Tweaks)
-echo  [2] Disable Telemetry & Tracking Services Only
+echo  [2] Disable Telemetry ^& Tracking Services Only
 echo  [3] Remove Pre-installed AppX Bloatware (Xbox, Cortana, Bing, etc.)
-echo  [4] Apply Registry Tweaks (Explorer & Privacy Improvements)
+echo  [4] Apply Registry Tweaks (Explorer ^& Privacy Improvements)
 echo  [5] Create System Restore Point (Recommended before starting)
-echo  [6] Revert Telemetry Services & Restore Defaults
+echo  [6] Revert Telemetry Services ^& Restore Defaults
 echo  [0] Exit
 echo ===================================================================
 set /p choice="Select an option [0-6]: "
@@ -62,7 +62,7 @@ goto menu
 :: ===================================================
 :disable_telemetry
 cls
-echo [*] Disabling Telemetry & Diagnostic Services...
+echo [*] Disabling Telemetry ^& Diagnostic Services...
 
 :: Stop & Disable Services
 for %%s in (
@@ -135,7 +135,7 @@ goto menu
 :: ===================================================
 :registry_tweaks
 cls
-echo [*] Applying Privacy & Explorer Registry Tweaks...
+echo [*] Applying Privacy ^& Explorer Registry Tweaks...
 
 :: Disable Telemetry in Registry
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -177,7 +177,7 @@ goto menu
 :: ===================================================
 :revert_defaults
 cls
-echo [*] Re-enabling Telemetry Services & Defaults...
+echo [*] Re-enabling Telemetry Services ^& Defaults...
 
 for %%s in (
     "DiagTrack"
